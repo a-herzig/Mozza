@@ -2,7 +2,8 @@
 vcf.gen.line <- function(genotypes, err.prob, dp1, dp2) {
   L <- length(genotypes)
   
-  mrd <- sample(dp1:dp2, L, replace = TRUE)
+  #mrd <- sample(dp1:dp2, L, replace = TRUE)
+  mrd <- runif(L,dp1,dp2)
   
   probs <- genotypes/2
   errs1 <- err.prob
